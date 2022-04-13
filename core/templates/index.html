@@ -1,11 +1,46 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="http://fonts.cdnfonts.com/css/brushia" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>DJANGO 1 - INDEX</title>
 </head>
 <body>
-    <h1>Index</h1>
+
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>D</span>JANGO <span>F</span>RAMEWORK</h1>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <br>
+        <h1>D J A N G O <span></span></h1>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section  -->
+
     <h2>{{ curso }}</h2>
     <p>{{ outro }}</p>
     <span>{{ logado }}</span>
@@ -29,5 +64,51 @@
         {% endfor %}
         </tbody>
     </table>
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>E</span>duardo <span>R</span>osa</h1>
+      </div>
+      <h2>Linguagens de programação</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="https://github.com/ThatianeDeboleto/100DaysOfCodePython"><img src="https://img.icons8.com/color/344/python--v1.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://github.com/ThatianeDeboleto/Java"><img src="https://img.icons8.com/color/344/java-coffee-cup-logo--v1.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://codepen.io/AneDeboleto/pen/oNwPxVX"><img src="https://img.icons8.com/color/344/javascript--v1.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://github.com/ThatianeDeboleto?tab=repositories"><img src="https://img.icons8.com/color/344/html-5--v1.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://github.com/ThatianeDeboleto?tab=repositories"><img src="https://img.icons8.com/color/452/css3.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://github.com/ThatianeDeboleto?tab=repositories"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968332.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://github.com/ThatianeDeboleto?tab=repositories"><img src="https://img.icons8.com/color/344/mysql-logo.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://github.com/ThatianeDeboleto?tab=repositories"><img src="https://img.icons8.com/color/344/c-plus-plus-logo.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://github.com/ThatianeDeboleto?tab=repositories"><img src="https://img.icons8.com/color/344/c-sharp-logo-2.png" /></a>
+        </div>
+      </div>
+
+      <p class="w3-medium">Powered by
+      <a title="Eduardo.Rosa" target="_blank" class="w3-hover-text-orange">Rosa.Master</a>
+    </p>
+    </div>
+  </section>
+  <!-- End Footer -->
+
+  <script src="{% static 'js/app.js' %}"></script>
 </body>
 </html>
