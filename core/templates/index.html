@@ -9,5 +9,25 @@
     <h2>{{ curso }}</h2>
     <p>{{ outro }}</p>
     <span>{{ logado }}</span>
+    <br>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Estoque</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for produto in produtos %}
+            <tr>
+                <td><a href="{% url 'produto' produto.id %}">{{ produto.nome  }}</a></td>
+                <td>{{ produto.preco  }}</td>
+                <td>{{ produto.estoque  }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
