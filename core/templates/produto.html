@@ -1,28 +1,129 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="http://fonts.cdnfonts.com/css/brushia" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Produto</title>
 </head>
-<body>
-    <h1>Produto</h1>
+<body class="w3-black">
 
-    <table>
-        <thead>
-            <tr>
-                <th>Produto</th>
-                <th>Preço</th>
-                <th>Estoque</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><a href="{% url 'index' %}">{{ produto.nome }}</a></td>
-                <td>{{ produto.preco }}</td>
-                <td>{{ produto.estoque }}</td>
-            </tr>
-        </tbody>
-    </table>
+ <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="{% url 'index' %}">
+              <div class="w3-container w3-xlarge"><h1>
+                  <div class="w3-left-align"><span>P</span>RODUTO</div></h1>
+              </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
 
+    <br><br><br><br>
+    <a href="{% url 'index' %}">
+    <button class="w3-button w3-hover-red">VOLTAR</button>
+    </a>
+    <br><br>
+    <div class="w3-center">
+  <div class="w3-table w3-bordered">
+	<table>
+		<thead>
+			<tr class="w3-red">
+				<th>PRODUTO</th>
+                <th>---</th>
+                <th>---</th>
+                <th>---</th>
+                <th>---</th>
+                <th>---</th>
+				<th>PREÇO</th>
+                <th>---</th>
+                <th>---</th>
+                <th>---</th>
+                <th>---</th>
+                <th>---</th>
+				<th>ESTOQUE</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="{% url 'index' %}">{{ produto.nome }}</a></td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+				<td>{{ produto.preco }}</td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+				<td>{{ produto.estoque }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+  </div>
+    <br><br><br><br>
+    <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>E</span>duardo <span>R</span>osa</h1>
+      </div>
+      <h2>Linguagens de programação</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <img src="https://img.icons8.com/color/344/python--v1.png"/>
+        </div>
+        <div class="social-item">
+          <img src="https://img.icons8.com/color/344/java-coffee-cup-logo--v1.png"/>
+        </div>
+        <div class="social-item">
+          <img src="https://img.icons8.com/color/344/javascript--v1.png"/>
+        </div>
+        <div class="social-item">
+          <img src="https://img.icons8.com/color/344/html-5--v1.png"/>
+        </div>
+        <div class="social-item">
+          <img src="https://img.icons8.com/color/452/css3.png"/>
+        </div>
+        <div class="social-item">
+          <img src="https://cdn-icons-png.flaticon.com/128/5968/5968332.png"/>
+        </div>
+        <div class="social-item">
+          <img src="https://img.icons8.com/color/344/mysql-logo.png"/>
+        </div>
+        <div class="social-item">
+          <img src="https://img.icons8.com/color/344/c-plus-plus-logo.png"/>
+        </div>
+        <div class="social-item">
+          <img src="https://img.icons8.com/color/344/c-sharp-logo-2.png"/>
+        </div>
+          <div class="social-item">
+          <img src="https://files.realpython.com/media/django-pony.c61d43c33ab3.png"/>
+        </div>
+      </div>
+
+      <p class="w3-medium">Powered by
+      <a title="Eduardo.Rosa" target="_blank" class="w3-hover-text-cyan">Rosa.Master</a>
+    </p>
+    </div>
+  </section>
+  <!-- End Footer -->
+
+  <script src="{% static 'js/app.js' %}"></script>
 </body>
 </html>

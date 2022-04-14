@@ -14,9 +14,13 @@ def index(request):
         teste = 'Usuário Logado'
     context = {
         'curso': 'Programação Web com Django Framework',
-        'outro': 'Django é muito bom !!!',
         'logado': teste,
-        'produtos': produtos
+        'produtos': produtos,
+        'introducao': 'É um framework Web Python de alto nível facilita o desenvolvimento de sites seguros.',
+        'free': 'É gratuito e de código aberto, tem uma comunidade próspera e ativa.',
+        'doc': 'Ótima documentação e muitas opções de suporte gratuito e pago.',
+        'vantagem1': 'É seguro, expansível, flexível.',
+        'vantagem2': 'É fácil de usar, rápido e simples, ampla documentação, design focado no uso.'
     }
     return render(request, 'index.html', context)
 

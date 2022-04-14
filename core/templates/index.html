@@ -13,15 +13,18 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>DJANGO 1 - INDEX</title>
 </head>
-<body>
+<body class="w3-black">
 
   <!-- Header -->
   <section id="header">
     <div class="header container">
       <div class="nav-bar">
         <div class="brand">
-          <a href="#hero">
-            <h1><span>D</span>JANGO <span>F</span>RAMEWORK</h1>
+          <a href="{% url 'index' %}">
+              <div class="w3-container w3-xlarge"><h1>
+                <div class="w3-left-align"><span>D</span>JANGO <span>F</span>RAMEWORK</div>
+                <div class="w3-right-align"><span>{{ logado }}</span></div></h1>
+              </div>
           </a>
         </div>
       </div>
@@ -29,41 +32,70 @@
   </section>
   <!-- End Header -->
 
+  <!-- Table -->
 
-  <!-- Hero Section  -->
-  <section id="hero">
-    <div class="hero container">
-      <div>
-        <br>
-        <h1>D J A N G O <span></span></h1>
-      </div>
-    </div>
-  </section>
-  <!-- End Hero Section  -->
 
-    <h2>{{ curso }}</h2>
-    <p>{{ outro }}</p>
-    <span>{{ logado }}</span>
-    <br>
-    <br>
-    <table>
-        <thead>
-            <tr>
-                <th>Produto</th>
-                <th>Preço</th>
-                <th>Estoque</th>
-            </tr>
-        </thead>
-        <tbody>
+  <br><br><br><br><br>
+  <div class="w3-center">
+  <div class="w3-table w3-bordered">
+	<table>
+		<thead>
+			<tr class="w3-cyan">
+				<th>PRODUTO</th>
+                <th>---</th>
+                <th>---</th>
+                <th>---</th>
+                <th>---</th>
+                <th>---</th>
+				<th>PREÇO</th>
+                <th>---</th>
+                <th>---</th>
+                <th>---</th>
+                <th>---</th>
+                <th>---</th>
+				<th>ESTOQUE</th>
+			</tr>
+		</thead>
+		<tbody>
         {% for produto in produtos %}
-            <tr>
-                <td><a href="{% url 'produto' produto.id %}">{{ produto.nome  }}</a></td>
-                <td>{{ produto.preco  }}</td>
-                <td>{{ produto.estoque  }}</td>
-            </tr>
+			<tr>
+				<td><a href="{% url 'produto' produto.id %}">{{ produto.nome }}</a></td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+				<td>{{ produto.preco }}</td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+				<td>{{ produto.estoque }}</td>
+			</tr>
         {% endfor %}
-        </tbody>
-    </table>
+		</tbody>
+	</table>
+</div>
+  </div>
+    <!--Conteúdo da Página -->
+    <div class="w3-padding-32" id="main">
+        <!-- Sobre -->
+        <div class="w3-content  w3-padding-64" id="sobre">
+            <h2 class="w3-text-cyan">Sobre o Django Framework</h2>
+            <hr style="width:360px" class="w3-opacity">
+            <ul class="w3-ul w3-hoverable w3-center w3-white">
+                <li class="w3-cyan w3-xlarge w3-padding-32">{{ curso }}</li>
+                <li class="w3-padding-16">{{ introducao }}</li>
+                <li class="w3-padding-16">{{ free }}</li>
+                <li class="w3-padding-16">{{ doc }}</li>
+                <li class="w3-padding-16">{{ vantagem1 }}</li>
+                <li class="w3-padding-16">{{ vantagem2 }}</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Sobre -->
+
 
   <!-- Footer -->
   <section id="footer">
@@ -74,36 +106,39 @@
       <h2>Linguagens de programação</h2>
       <div class="social-icon">
         <div class="social-item">
-          <a href="https://github.com/ThatianeDeboleto/100DaysOfCodePython"><img src="https://img.icons8.com/color/344/python--v1.png" /></a>
+          <img src="https://img.icons8.com/color/344/python--v1.png"/>
         </div>
         <div class="social-item">
-          <a href="https://github.com/ThatianeDeboleto/Java"><img src="https://img.icons8.com/color/344/java-coffee-cup-logo--v1.png" /></a>
+          <img src="https://img.icons8.com/color/344/java-coffee-cup-logo--v1.png"/>
         </div>
         <div class="social-item">
-          <a href="https://codepen.io/AneDeboleto/pen/oNwPxVX"><img src="https://img.icons8.com/color/344/javascript--v1.png" /></a>
+          <img src="https://img.icons8.com/color/344/javascript--v1.png"/>
         </div>
         <div class="social-item">
-          <a href="https://github.com/ThatianeDeboleto?tab=repositories"><img src="https://img.icons8.com/color/344/html-5--v1.png" /></a>
+          <img src="https://img.icons8.com/color/344/html-5--v1.png"/>
         </div>
         <div class="social-item">
-          <a href="https://github.com/ThatianeDeboleto?tab=repositories"><img src="https://img.icons8.com/color/452/css3.png" /></a>
+          <img src="https://img.icons8.com/color/452/css3.png"/>
         </div>
         <div class="social-item">
-          <a href="https://github.com/ThatianeDeboleto?tab=repositories"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968332.png" /></a>
+          <img src="https://cdn-icons-png.flaticon.com/128/5968/5968332.png"/>
         </div>
         <div class="social-item">
-          <a href="https://github.com/ThatianeDeboleto?tab=repositories"><img src="https://img.icons8.com/color/344/mysql-logo.png" /></a>
+          <img src="https://img.icons8.com/color/344/mysql-logo.png"/>
         </div>
         <div class="social-item">
-          <a href="https://github.com/ThatianeDeboleto?tab=repositories"><img src="https://img.icons8.com/color/344/c-plus-plus-logo.png" /></a>
+          <img src="https://img.icons8.com/color/344/c-plus-plus-logo.png"/>
         </div>
         <div class="social-item">
-          <a href="https://github.com/ThatianeDeboleto?tab=repositories"><img src="https://img.icons8.com/color/344/c-sharp-logo-2.png" /></a>
+          <img src="https://img.icons8.com/color/344/c-sharp-logo-2.png"/>
+        </div>
+          <div class="social-item">
+          <img src="https://files.realpython.com/media/django-pony.c61d43c33ab3.png"/>
         </div>
       </div>
 
       <p class="w3-medium">Powered by
-      <a title="Eduardo.Rosa" target="_blank" class="w3-hover-text-orange">Rosa.Master</a>
+      <a title="Eduardo.Rosa" target="_blank" class="w3-hover-text-cyan">Rosa.Master</a>
     </p>
     </div>
   </section>
