@@ -6,15 +6,9 @@ from .models import Produto
 def index(request):
     produtos = Produto.objects.all()
     print(dir(request))
-    print(f"User: {request.user.last_name}")
 
-    if str(request.user) == 'AnonymousUser':
-        teste = 'Usuário não logado'
-    else:
-        teste = 'Usuário Logado'
     context = {
         'curso': 'Programação Web com Django Framework',
-        'logado': teste,
         'produtos': produtos,
         'introducao': 'É um framework Web Python de alto nível facilita o desenvolvimento de sites seguros.',
         'free': 'É gratuito e de código aberto, tem uma comunidade próspera e ativa.',

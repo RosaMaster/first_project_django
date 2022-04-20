@@ -27,9 +27,9 @@ SECRET_KEY = 'django-insecure-$*y4*1_x#v*5g9&q&oyfcq#t@hm4jp9ztrv*@9w7)sx(jelpdn
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG com valor True = modo desenvolvimento
 # DEBUG com valor False = modo produção
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -128,3 +128,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # usado durante a produçã
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGOUT_REDIRECT_URL = 'index'
