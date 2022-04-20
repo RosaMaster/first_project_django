@@ -23,7 +23,7 @@
           <a href="{% url 'index' %}">
               <div class="w3-container w3-xlarge"><h1>
                 <div class="w3-left-align"><span>D</span>JANGO <span>F</span>RAMEWORK</div>
-              </div>
+              </h1></div>
           </a>
         </div>
       </div>
@@ -36,47 +36,48 @@
 
   <br><br><br><br><br>
   <div class="w3-center">
-  <div class="w3-table w3-bordered">
-	<table>
-		<thead>
-			<tr class="w3-cyan">
-				<th>PRODUTO</th>
-                <th>---</th>
-                <th>---</th>
-                <th>---</th>
-                <th>---</th>
-                <th>---</th>
-				<th>PREÇO</th>
-                <th>---</th>
-                <th>---</th>
-                <th>---</th>
-                <th>---</th>
-                <th>---</th>
-				<th>ESTOQUE</th>
-			</tr>
-		</thead>
-		<tbody>
-        {% for produto in produtos %}
-			<tr>
-				<td><a href="{% url 'produto' produto.id %}">{{ produto.nome }}</a></td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-				<td>{{ produto.preco }}</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-				<td>{{ produto.estoque }}</td>
-			</tr>
-        {% endfor %}
-		</tbody>
-	</table>
-</div>
-  </div>
+      <div class="w3-table w3-bordered">
+        <table>
+            <thead>
+                <tr class="w3-cyan">
+                    <th>PRODUTO</th>
+                        <th>---</th>
+                        <th>---</th>
+                        <th>---</th>
+                        <th>---</th>
+                        <th>---</th>
+                    <th>PREÇO</th>
+                        <th>---</th>
+                        <th>---</th>
+                        <th>---</th>
+                        <th>---</th>
+                        <th>---</th>
+                    <th>ESTOQUE</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for produto in produtos %}
+                    <tr>
+                        <td><a href="{% url 'produto' produto.id %}">{{ produto.nome }}</a></td>
+                            <td>---</td>
+                            <td>---</td>
+                            <td>---</td>
+                            <td>---</td>
+                            <td>---</td>
+                        <td>{{ produto.preco }}</td>
+                            <td>---</td>
+                            <td>---</td>
+                            <td>---</td>
+                            <td>---</td>
+                            <td>---</td>
+                        <td>{{ produto.estoque }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    </div>
+
     <!--Conteúdo da Página -->
     <div class="w3-padding-32" id="main">
         <!-- Sobre -->
